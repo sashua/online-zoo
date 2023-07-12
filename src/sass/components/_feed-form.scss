@@ -1,0 +1,231 @@
+.feed-form {
+  padding: 40px 92px 62px;
+
+  text-align: center;
+  color: $colors-blueBlack;
+
+  background-color: $colors-glassWhite;
+  border-radius: $radii-l;
+
+  @include media-desktop-small {
+    padding: 20px 45px 45px;
+  }
+  @include media-tablet {
+    padding: 30px 0;
+  }
+  @include media-mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.feed-form__title {
+  margin-bottom: 20px;
+
+  @include font($weight: 400, $size: $fontSizes-H2);
+  color: $colors-lightOrange;
+
+  @include media-desktop-small {
+    margin-bottom: 10px;
+  }
+  @include media-tablet {
+    margin-bottom: 20px;
+    padding: 0 30px;
+  }
+  @include media-mobile {
+    margin-bottom: 10px;
+    padding: 0 5px;
+    @include font($size: 24px);
+  }
+}
+
+.feed-form__caption {
+  margin-bottom: 105px;
+
+  @include font($size: $fontSizes-subtitle);
+  text-align: left;
+
+  @include media-tablet {
+    margin-bottom: 95px;
+    padding: 0 30px;
+    text-align: center;
+  }
+  @include media-mobile {
+    margin-bottom: 35px;
+    padding: 0 5px;
+    @include font($size: 16px, $height: 1.4);
+  }
+}
+
+.feed-form__info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 50px;
+
+  @include media-desktop-small {
+    padding-right: 30px;
+  }
+  @include media-tablet {
+    margin-bottom: 40px;
+  }
+  @include media-mobile {
+    gap: 50px;
+    padding: 0 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.feed-form__info {
+  @include media-mobile {
+    @include font($size: 9px);
+  }
+}
+
+.feed-form__number {
+  position: relative;
+
+  @include font($weight: 500, $size: $fontSizes-number);
+  color: $colors-black;
+
+  @include media-mobile {
+    @include font($size: 40px, $height: 1.4);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translate(100%, -50%);
+
+    width: 14px;
+    height: 14px;
+    background: url("../img/x_icon.svg");
+
+    @include media-mobile {
+      right: -10px;
+
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.feed-form__image {
+  flex-basis: 270px;
+
+  @include media-mobile {
+    flex-basis: 160px;
+  }
+}
+
+.feed-form__text-amount {
+  margin-bottom: 20px;
+  text-align: left;
+  color: $colors-black;
+
+  @include media-desktop-small {
+    padding-left: 20px;
+  }
+  @include media-tablet {
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  @include media-mobile {
+    padding-left: 5px;
+    margin-bottom: 8px;
+  }
+}
+
+.feed-form__amounts {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 98px;
+  padding: 8px 30px;
+  height: 26px;
+
+  background-color: $colors-darkGray;
+  border-radius: $radii-s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 60px);
+    height: 2px;
+
+    background-color: $colors-gray;
+
+    @include media-desktop-small {
+      width: calc(100% - 20px);
+    }
+    @include media-tablet {
+      width: calc(100% - 70px);
+    }
+    @include media-mobile {
+      height: 1px;
+      width: calc(100% - 35px);
+    }
+  }
+
+  @include media-desktop-small {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  @include media-tablet {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  @include media-mobile {
+    padding: 4px 17px;
+    margin-bottom: 50px;
+    height: 14px;
+  }
+}
+
+.feed-form__another {
+  margin-bottom: 26px;
+
+  @include media-desktop-small {
+    margin-bottom: 24px;
+  }
+  @include media-tablet {
+    margin-bottom: 35px;
+  }
+  @include media-mobile {
+    margin-bottom: 25px;
+  }
+}
+
+.feed-form__period-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.feed-form__button {
+  @include media-mobile {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100% - 10px);
+  }
+}
+
+.feed-form__text {
+  margin-top: 30px;
+
+  @include media-mobile {
+    padding: 0 5px;
+    @include font($size: 15px);
+  }
+}

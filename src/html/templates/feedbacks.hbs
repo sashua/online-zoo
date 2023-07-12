@@ -1,0 +1,22 @@
+{{#each feedbacks}}
+  <li class="feedback feedbacks__item">
+    <div class="feedback__header">
+      <div class="feedback__icon">
+        <img src="{{icon}}" alt="User photo" width="37" />
+      </div>
+      <div>
+        <p class="feedback__name">{{name}}</p>
+        <p class="feedback__info">
+          <span class="feedback__location">{{location}}</span><span
+            class="feedback__date"
+          >{{date}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="feedback__text-wrap">
+      <p class="feedback__text">
+        {{text}}
+      </p>
+    </div>
+  </li>
+{{/each}}

@@ -1,0 +1,61 @@
+// === Typography start ===
+@mixin font(
+  $family: null,
+  $weight: null,
+  $size: null,
+  $height: null,
+  $spacing: null
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+// --- Typography end ---
+
+// === Media breakpoints start ===
+$desktopWidth: 1366px;
+$desktopSmallWidth: 1000px;
+$tabletWidth: 640px;
+$mobileWidth: 320px;
+
+@mixin media-desktop-small {
+  @media screen and (max-width: ($desktopWidth - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (max-width: ($desktopSmallWidth - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: ($tabletWidth - 1px)) {
+    @content;
+  }
+}
+
+// --- Media breakpoints end ---
+
+// === Media resolutions start ===
+@mixin media-2x {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+// --- Media resolutions end ---
+
+// === Borders start ===
+@mixin border-bg($border, $radius, $image, $bg-color) {
+  border: $border transparent;
+  border-radius: $radius;
+  background-image: linear-gradient(to right, $bg-color, $bg-color), $image;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+// --- Borders start ---

@@ -1,0 +1,95 @@
+import userIcon from "../../img/user-icon.svg";
+import user1 from "../../img/user-1.jpg";
+import user2 from "../../img/user-2.jpg";
+import user3 from "../../img/user-3.jpg";
+
+export const feedbacksData = [
+  {
+    id: 1,
+    icon: userIcon,
+    name: "Ronna Alfonso",
+    location: "Poland",
+    date: "Today",
+    text: "Used our SRV (rediscovery voucher) and was so glad we did that. Having been to massive zoos in China, I think WRS is truly a WILDLIFE zoo. Great diversity of nature and the beauty of all kinds of wildlife. Also a very enriching & knowledge-filled place, allowing us to appreciate nature at her best. Thanks for reminding us that size of the animals is not the only yardstick of beauty! My husband did however noticed that we were pretty far from the animals , he would loved if we are closer. Also an itinerary of performance time slots at the e-ticket email or a flyer at the entrance area would be handy. We didn’t get to watch any performance while we were there, I was too tired to google for the time slots.",
+  },
+  {
+    id: 2,
+    icon: user2,
+    name: "Fredra Simants",
+    location: "Australia",
+    date: "Yesterday",
+    text: "Whilst we understand that show capacity is beyond control amid the pandemic, show seats should be made bookable at the time of park ticket purchase instead of playing fastest finger first to book a slot and within 1-2 minutes, system is saturated and subsequently full. By doing so, people can choose to still come and naturally, at a discounted price since show would no longer be available. Came on Saturday 4th September and unable to get seat for 2 shows that releases slot 90mins prior to start. Changes were made where it seems people don't specifically need to be at the show venue to start booking, but can be anywhere in the zoo as long as connected to the zoo WiFi network. Still very disappointing as this is the 2nd visit in a row that it happens.",
+  },
+  {
+    id: 3,
+    icon: userIcon,
+    name: "Edna Benford",
+    location: "Philippines",
+    date: "Yesterday",
+    text: "It was rather exciting and a very personalised private tour! Really big thanks to our wildlife experience guide Neetha and Gen :) Had a request for mandarin speaking guide and they really they tried their best to explain to us in Chinese haha. They were also able to make an advance booking for us for animal presentation and allow us to go in without any booking in advance made by ourselves. Fuss free! They were also really patience despite having my dad not being able to catch up and corporate at times. However, the private buggy tour were really fun! Will definitely come back for more. Personally I would recommend coming in the morning slot (930am) as you would get more time to walk around and taking a look at the zoo. Also, a properly planned itinerary will also make the tour a lot more fun as well. Overall, I felt that my 2nd day of outing to zoo was well spent!",
+  },
+  {
+    id: 4,
+    icon: user1,
+    name: "Stanislaus Spearman",
+    location: "Poland",
+    date: "4 days ago",
+    text: "The zoo looks very nice. Next to the animal enclosures it almost looks like a large botanical garden. You've seen it in half a day without kids. The price is not bland (for non-residents). Other parks are in the area. Combi tickets exist. An enclosure is never big enough for an animal that normally lives in the wild. That's the way it is at a zoo. Elephant giraffes can just turn around. I noticed that the line-up is sometimes very thin. One tiger, one pygmy hippo, etc.).",
+  },
+  {
+    id: 5,
+    icon: userIcon,
+    name: "Rodd Bolitho",
+    location: "France",
+    date: "1 week ago",
+    text: "There is a large variety of animals to be seen including some live shows. Give yourself plenty of time to see all the animals and recommend buying a reasonably priced ticket to the hop on hop off zoo shuttle- saves a ot of walking time. Really enjoyed the exhibits including an area where birds and some invertebrates walked around freely. There are strategically placed cafes around the zoo if you get thirsty or hungry. We travelled to and from the zoo using Uber equivilant- was also good value for five adults.",
+  },
+  {
+    id: 6,
+    icon: userIcon,
+    name: "Noland O'Hear",
+    location: "China",
+    date: "1 week ago",
+    text: "This zoo is such a beautiful place to visit. We have been here many times but never done the 1 hour Wild Discoverer Tour. There is one at 10:30am - there is another tour at 3:30pm if you were heading to the zoo later in the day. I booked this ahead of time as you get a 10% discount on tours when you book the lot together - $38 per adult and $25 per child on top of the entry fee before discount and it was worth every cent. You get driven around by a guide in a golf buggy, who tells you facts about animals and you get priority feeding to the giraffes, cuddle a giant tortoise and he even snuck in a orangutan photo for us. At the end he dropped us to where we wanted in the zoo and we could do as we please.",
+  },
+  {
+    id: 7,
+    icon: user3,
+    name: "Dorine Eam",
+    location: "Peru",
+    date: "2 weeks ago",
+    text: "We went here in the early(ish) morning to participate in the breakfast buffet with the orangutans. To be fair, the buses that took us from the mid city to the zoo took a very long time, but once we were at the zoo it was incredible. I got a photo with the orangutans and a snake, and it was amazing to see the monkeys have their own little highway in the sky to move around wherever they pleased during the day.",
+  },
+  {
+    id: 8,
+    icon: userIcon,
+    name: "Baxter De-Lorenzo",
+    location: "Mauritius",
+    date: "1 month ago",
+    text: "Compared to 9-10 years ago, the Zoo has improved greatly in terms of attractions and customer service. All animal exhibits were well-designed and eye-catching, coupled with educational material that was easy to understand. Even amidst the construction going on currently, the zoo was still easy to navigate. Animal shows didn’t disappoint, however during this Covid season I felt they were slightly shortened (nevertheless, amazing anyway). Ticket prices might have steeped a bit over the years, but I think it’s totally worth it for the number and variety of animals there are now. Amazing work! to all those working in the zoo, keep it up! I’ll definitely be back there someday.",
+  },
+  {
+    id: 9,
+    icon: userIcon,
+    name: "Rog Hardingham",
+    location: "Laos",
+    date: "1 month ago",
+    text: "In terms of conservation, environmental messaging, and natural animal habitats, the zoo is one of the best. For the visitor - it is not convenient. We took a taxi as my friend has mobility issues, and the taxi stand is quite far from the entry - at least twice as far from the entry as the bus stop. I phoned in advance to be sure we could get a taxi home, and the staff assured me that someone would be on site to call one. No staff was anywhere near the very isolated taxi stand. The zoo is very large, which is good for the animals, but we walked an hour before we saw anything besides some birds and lizards. Probably we won't go back.",
+  },
+  {
+    id: 10,
+    icon: userIcon,
+    name: "Milena Paunton",
+    location: "Brazil",
+    date: "1 month ago",
+    text: "This zoo is amazing! IT has so many different variety of animals from all around the world. Despite the limited area of the zoo, the representation of the species is truly global. Animals on the endangered species list are well supported and even bred offsprings. The visit is not just about expecting to see many animals of the same species, but it is about being an engaging experience as much as possible for each and every species where permissible. This is not a safari, yet the environment is brought to the visitors as close as possible. From a visitors point of view is fantastic. (Put must have dolphins or the polar bear that lived for a very long time there aside) However, from the animal itself living in a controlled habitat has its advantages and disadvantages. Protection of the species survival is the utmost, however, this seemed to cost the animal the required area for roaming, thriving and animal socialising within the animal species and inter-social with other animals. Although well, looked after, the animals seemed to lack enough space/area - after all this is a form of captivity. Most animals have lost their ability to hunt and find they home for survival. Still, this zoo is one of the best I have seen. All continents are represented. Making fun out of the zoo is also Singapore’s greatest gift to attracting visitors to a calm, safe and hassle free zoo environment. Worth a visit and certainly all the attractions cannot be seen in a day - such and amazing design to a small area. With the adjacent attractions, allocate at least three good (weather) days to wander the zoo and surrounding attractions. This visit is highly recommended. Start the visit when the gate opens to get the most out of it, even for multiple visits.",
+  },
+  {
+    id: 11,
+    icon: userIcon,
+    name: "Chariot Braunes",
+    location: "Greece",
+    date: "3 months ago",
+    text: "Crowds and crowds of people. The management of the zoo obviously failed to organize the crowd. We wasted too much time standing in long queues, first one was to purchase the tickets to the night safari, 2nd one was to enter the zoo are, 3d one was to take a van which we finally still missed. Then too little time left for us to see the animals because we had to go back to our bus. We paid a lot of money just to run on the zoo paths and see a few glimpses of a night animal life. Highly disappointed.",
+  },
+];

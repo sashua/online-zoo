@@ -1,0 +1,95 @@
+// === Button start ===
+.button {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+  min-width: 298px;
+  padding: 16px;
+
+  @include font($weight: 500, $height: 1.4);
+  text-align: center;
+  text-transform: uppercase;
+  color: $colors-white;
+
+  background-image: $colors-bgOrange;
+  border-radius: $radii-m;
+  overflow: hidden;
+
+  &--round {
+    border-radius: $radii-xl;
+  }
+
+  &--circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: auto;
+    width: 62px;
+    height: 62px;
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: $colors-orange;
+    opacity: 0;
+    transition: background-color $animations-default,
+      opacity $animations-default;
+  }
+  &:hover::before,
+  &:hover::before {
+    opacity: 1;
+  }
+  &:active::before {
+    background-color: $colors-green;
+    opacity: 1;
+  }
+  &:disabled::before {
+    background-color: $colors-gray;
+    opacity: 1;
+  }
+
+  @include media-mobile {
+    display: block;
+    width: initial;
+    min-width: auto;
+  }
+}
+// --- Button end ---
+
+// === Menu-button start ===
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+
+  color: inherit;
+
+  transition: color $animations-default;
+
+  &:hover,
+  &:focus {
+    color: $colors-green;
+  }
+  &:active {
+    color: $colors-orange;
+  }
+}
+
+.menu-button__svg {
+  width: 22px;
+  height: 22px;
+}
+// --- Menu-button end ---

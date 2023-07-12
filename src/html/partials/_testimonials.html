@@ -1,0 +1,32 @@
+<section class="testimonials">
+  <div class="container testimonials__container">
+    <h2 class="testimonials__title">Testimonials</h2>
+    <div class="feedbacks testimonials__slider js-feedbacks-slider">
+      <ul class="feedbacks__list js-slider-content"></ul>
+      <div class="feedback__scroll js-slider-scroll">
+        <input
+          class="js-slider-range"
+          type="range"
+          value="0"
+          min="0"
+          max="7"
+          step="1"
+        />
+      </div>
+      <div class="feedbacks__popup js-popup">
+        <div class="feedback js-popup-content"></div>
+        <button
+          class="menu-button feedbacks__close js-close-popup"
+          type="button"
+        >
+          <svg class="menu-button__svg" width="22" height="22">
+            <use href="../img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <button class="button testimonials__button" type="button">
+      Leave feedback
+    </button>
+  </div>
+</section>

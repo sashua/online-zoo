@@ -1,0 +1,236 @@
+// === Input start ===
+.form-input {
+  padding: 10px;
+  min-width: 228px;
+
+  @include font($height: 1);
+
+  background-color: transparent;
+  border: $borders-s $colors-lightOrange;
+  border-radius: $radii-s;
+
+  transition: color $animations-default, border-color $animations-default;
+
+  &:focus {
+    border-color: $colors-green;
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    color: $colors-red;
+    border-color: $colors-red;
+  }
+
+  &::placeholder {
+    @include font($size: $fontSizes-body);
+
+    color: $colors-smokeGray;
+  }
+
+  &--big {
+    padding: 14px 40px 14px 14px;
+    min-width: 268px;
+
+    @include font($size: $fontSizes-subtitle);
+
+    &:focus {
+      color: $colors-green;
+    }
+
+    @include media-tablet {
+      @include font($size: 20px);
+
+      padding: 8px 30px 8px 8px;
+      min-width: 180px;
+    }
+  }
+}
+
+.form-input__label {
+  position: relative;
+}
+
+.form-input__icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  fill: $colors-smokeGray;
+  transition: fill $animations-default;
+  pointer-events: none;
+
+  .form-input:focus + & {
+    fill: $colors-green;
+  }
+
+  .form-input:not(:focus):not(:placeholder-shown) + & {
+    fill: currentColor;
+  }
+
+  .form-input:not(:focus):not(:placeholder-shown):invalid + & {
+    fill: $colors-red;
+  }
+}
+// --- Input end ---
+
+// === Button start ===
+.form-button {
+  padding: 12px 40px;
+
+  @include font($height: 1);
+  color: $colors-black;
+
+  background-color: $colors-lightGray;
+  border: $borders-s $colors-blueBlack;
+  border-radius: $radii-m;
+
+  transition: color $animations-default, border-color $animations-default;
+
+  &:hover,
+  &:focus {
+    color: $colors-green;
+    border-color: $colors-green;
+  }
+
+  .form-input:not(:focus):not(:placeholder-shown):invalid + & {
+    color: $colors-red;
+    border-color: $colors-red;
+  }
+}
+// --- Button end ---
+
+// === Check start ===
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.form-check__input {
+  @extend .visually-hidden;
+}
+
+.form-check__custom {
+  width: 16px;
+  height: 16px;
+
+  background-color: transparent;
+  border: $borders-s $colors-lightOrange;
+  border-radius: 50%;
+
+  transition: background-color $animations-default,
+    border-color $animations-default;
+
+  .form-check__input:checked + & {
+    background-color: $colors-green;
+    border-color: $colors-green;
+  }
+}
+// --- Check end ---
+
+// === Select start ===
+.form-select {
+  @include media-desktop-small {
+    &:first-child {
+      display: none;
+    }
+  }
+  @include media-tablet {
+    &:not(:nth-child(n + 4)) {
+      display: none;
+    }
+  }
+}
+
+.form-select__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form-select__input {
+  @extend .visually-hidden;
+}
+
+.form-select__custom {
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  background-color: $colors-yellow;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: $borders-m $colors-lightOrange;
+    border-radius: 50%;
+    opacity: 0;
+
+    transition: opacity $animations-default;
+  }
+
+  .form-select__input:checked + &::before,
+  .form-select__input:checked + &::after {
+    opacity: 1;
+  }
+
+  &::before {
+    width: 23px;
+    height: 23px;
+  }
+  &::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include media-mobile {
+    width: 6px;
+    height: 6px;
+
+    &::before {
+      border: $borders-s $colors-lightOrange;
+      width: 12px;
+      height: 12px;
+    }
+    &::after {
+      border: $borders-s $colors-lightOrange;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.form-select__text {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  transform: translateX(-50%);
+
+  @include font($weight: 500, $size: $fontSizes-subtitle);
+
+  .form-select__input:checked + & {
+    color: $colors-lightOrange;
+  }
+
+  @include media-desktop-small {
+    left: 18px;
+  }
+  @include media-tablet {
+    left: 5px;
+  }
+  @include media-mobile {
+    top: 16px;
+    left: 3;
+    @include font($weight: 400, $size: 14px);
+  }
+}
+
+// --- Select end ---

@@ -1,0 +1,91 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  padding: 4px;
+
+  @include font($size: $fontSizes-logo, $height: 1.2);
+  color: inherit;
+
+  border: $borders-s currentColor;
+  border-radius: $radii-s;
+  transition: border-color $animations-default;
+
+  &:hover,
+  &:focus {
+    border-color: $colors-green;
+  }
+
+  @include media-mobile {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    border: none;
+  }
+
+  &--small {
+    @include media-tablet {
+      display: flex;
+      width: auto;
+      height: auto;
+      padding: 3px;
+
+      @include font($weight: 400, $size: 12px);
+      border: none;
+    }
+  }
+
+  &--menu {
+    display: flex;
+    width: 66px;
+    height: 42px;
+    padding: 3px;
+
+    @include font($size: 15px, $height: 18px);
+
+    border: $borders-s currentColor;
+  }
+}
+
+.logo__word {
+  position: relative;
+}
+
+.logo__svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-5px, -5px);
+
+  width: 12px;
+  height: 21px;
+
+  transition: fill $animations-default;
+
+  .logo:hover &,
+  .logo:focus & {
+    fill: $colors-green;
+  }
+
+  .logo--small & {
+    @include media-tablet {
+      transform: translate(-4px, -4px);
+
+      width: 8px;
+      height: 14px;
+    }
+  }
+
+  .logo--menu & {
+    @include media-tablet {
+      transform: translate(-4px, -4px);
+
+      width: 10px;
+      height: 17.5px;
+    }
+  }
+}

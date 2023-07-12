@@ -1,0 +1,64 @@
+<form class="feed-form">
+  <h3 class="feed-form__title">Pick and feed a friend</h3>
+  <p class="feed-form__caption">
+    We know the animals bring you joy, and in these extraordinary times, we’re
+    glad.
+  </p>
+
+  <div class="feed-form__info-wrap">
+    <div class="feed-form__info">
+      <p class="feed-form__number">4</p>
+      <p>Panda diet for the day.</p>
+    </div>
+    <div class="feed-form__image">
+      <img src="../img/panda.svg" alt="Panda" width="270" />
+    </div>
+  </div>
+
+  <p class="feed-form__text-amount">Amount</p>
+  <ul class="feed-form__amounts js-amounts-list"></ul>
+
+  <label class="form-input__label feed-form__another">
+    <input
+      class="form-input form-input--big js-amount-value"
+      type="number"
+      name="value"
+      min="0"
+      max="9999"
+      step="1"
+      placeholder="Another amount"
+    />
+    <svg class="form-input__icon" width="12" height="24">
+      <use href="../img/sprite.svg#icon-usd"></use>
+    </svg>
+  </label>
+
+  <div class="feed-form__period-wrap">
+    <label class="form-check">
+      <input
+        class="form-check__input"
+        type="radio"
+        name="period"
+        value="monthly"
+      />
+      <span class="form-check__custom"></span>
+      <span class="form-check__text">Monthly</span>
+    </label>
+    <label class="form-check">
+      <input
+        class="form-check__input"
+        type="radio"
+        name="period"
+        value="once"
+        checked
+      />
+      <span class="form-check__custom"></span>
+      <span class="form-check__text">Once</span>
+    </label>
+  </div>
+
+  <button class="button button--round feed-form__button" type="submit">
+    Feed a friend now
+  </button>
+  <p class="feed-form__text">Share with your friends on social networks</p>
+</form>

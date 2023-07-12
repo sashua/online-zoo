@@ -1,0 +1,31 @@
+<ul class="slider__list">
+  {{#each animals}}
+    <li class="animal">
+      <a class="animal__link" href="#!">
+        <div class="animal__image">
+          <img
+            class="animal__img"
+            src="{{image}}"
+            alt="{{name}}"
+            width="168"
+            height="168"
+          />
+          <div class="animal__text-wrap">
+            <p class="animal__text">
+              {{info}}
+            </p>
+          </div>
+        </div>
+        <div class="animal__footer">
+          <div class="animal__info">
+            <h4 class="animal__name">{{name}}</h4>
+            <p class="animal__living">{{living}}</p>
+          </div>
+          <svg class="animal__food" width="38" height="38">
+            <use href="{{food}}"></use>
+          </svg>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</ul>

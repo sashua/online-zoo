@@ -1,0 +1,92 @@
+.donate {
+  padding-top: 510px;
+  padding-bottom: 180px;
+
+  background: $colors-bgLightOrange;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 470px;
+    background: url("../img/panda-bg.jpg") no-repeat top -260px center / cover;
+
+    @include media-desktop-small {
+      background-position: top -260px left 28%;
+      background-size: 1600px;
+    }
+    @include media-tablet {
+      height: 370px;
+      background-position: top -250px right 63%;
+      background-size: 1350px;
+    }
+    @include media-mobile {
+      height: 220px;
+      background-position: top -128px right 67%;
+      background-size: 768px;
+    }
+  }
+
+  @include media-desktop-small {
+    padding-bottom: 34px;
+  }
+  @include media-tablet {
+    padding-top: 400px;
+    padding-bottom: 46px;
+  }
+  @include media-mobile {
+    padding-top: 250px;
+    padding-bottom: 25px;
+  }
+}
+
+.donate__caption {
+  margin-bottom: 10px;
+
+  @include font($weight: 400, $size: $fontSizes-H3, $height: 1.3);
+  text-transform: uppercase;
+  color: $colors-white;
+
+  @include media-desktop-small {
+    max-width: 780px;
+    margin-bottom: 30px;
+  }
+  @include media-tablet {
+    margin-bottom: 20px;
+    @include font($size: 24px, $height: 1.2);
+  }
+}
+
+.donate__text {
+  margin-bottom: 40px;
+
+  @include font($weight: 500, $height: 1.4);
+  color: $colors-white;
+
+  @include media-desktop-small {
+    margin-bottom: 45px;
+  }
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.donate__title {
+  margin-bottom: 60px;
+
+  @include font($weight: 400, $size: $fontSizes-H3, $height: 1.3);
+  color: $colors-lightOrange;
+
+  @include media-desktop-small {
+    margin-bottom: 40px;
+  }
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+  @include media-mobile {
+    margin-bottom: 25px;
+    @include font($size: 24px);
+  }
+}

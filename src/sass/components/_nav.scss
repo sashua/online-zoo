@@ -1,0 +1,17 @@
+.nav__list {
+  display: flex;
+}
+
+.nav__link {
+  display: block;
+  padding-left: 29px;
+  padding-right: 29px;
+
+  @include font($height: 1.4);
+  color: inherit;
+
+  @include media-desktop-small {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

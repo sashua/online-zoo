@@ -1,0 +1,263 @@
+$card-gap: 30px;
+
+.testimonials {
+  padding-top: 140px;
+  padding-bottom: 180px;
+
+  background: url("../img/testimonials-bg.png") bottom -130px right no-repeat;
+
+  @include media-desktop-small {
+    padding-top: 100px;
+    padding-bottom: 140px;
+
+    background-position: bottom -90px right;
+    background-size: 200px;
+  }
+  @include media-tablet {
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    text-align: center;
+    background-position: bottom -65px right -5px;
+    background-size: 120px;
+  }
+  @include media-mobile {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    background-position: bottom -30 right;
+    background-size: 60px;
+  }
+}
+
+.testimonials__title {
+  margin-bottom: 50px;
+
+  @include font($weight: 400, $size: $fontSizes-H3, $height: 1.3);
+  text-align: center;
+
+  @include media-desktop-small {
+    margin-bottom: 30px;
+  }
+  @include media-mobile {
+    margin-bottom: 20px;
+    @include font($size: 24px);
+  }
+}
+
+.testimonials__slider {
+  margin-bottom: 30px;
+
+  @include media-desktop-small {
+    margin-bottom: 52px;
+  }
+  @include media-tablet {
+    margin-bottom: 38px;
+  }
+  @include media-mobile {
+    margin-bottom: 25px;
+  }
+}
+
+.testimonials__button {
+  @include media-tablet {
+    min-width: 240px;
+  }
+  @include media-mobile {
+    margin: 0 auto;
+    max-width: 240px;
+  }
+}
+
+// === Feedback slider start ===
+.feedbacks {
+  overflow: hidden;
+}
+
+.feedbacks__list {
+  position: relative;
+  display: flex;
+  gap: $card-gap;
+
+  margin-bottom: 20px;
+
+  transform: translateX(0);
+  transition: transform $animations-slide;
+
+  @include media-tablet {
+    flex-direction: column;
+    gap: 15px;
+
+    max-height: 360px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.feedbacks__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibilitu $animations-default, opacity $animations-default;
+
+  &.is-shown {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.feedbacks__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, -50%);
+
+  color: $colors-lightOrange;
+}
+// --- Feedback slider end ---
+
+// === Feedback card start ===
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 267px;
+  height: 390px;
+  padding: 15px 0;
+  overflow: hidden;
+
+  text-align: left;
+
+  @include border-bg(
+    $border: $borders-m,
+    $radius: $radii-l,
+    $image: $colors-bgPink,
+    $bg-color: $colors-lightGray
+  );
+}
+
+.feedbacks__item {
+  width: auto;
+  flex-shrink: 0;
+  flex-basis: calc((100% - 3 * $card-gap) / 4);
+
+  @include media-desktop-small {
+    flex-basis: calc((100% - 2 * $card-gap) / 3);
+  }
+  @include media-tablet {
+    height: 110px;
+    max-height: 110px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  @include media-mobile {
+    padding: 10px 0;
+  }
+
+  & .feedback__header {
+    @include media-mobile {
+      padding: 0 10px;
+    }
+  }
+
+  & .feedback__info {
+    @include media-mobile {
+      margin-top: 0;
+    }
+  }
+
+  & .feedback__text-wrap {
+    @include media-tablet {
+      overflow-y: hidden;
+    }
+  }
+}
+
+.feedback__header {
+  display: flex;
+  gap: 6px;
+  padding: 0 15px;
+}
+
+.feedback__icon {
+  width: 37px;
+  height: 37px;
+
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.feedback__info {
+  margin-top: 2px;
+
+  @include font($weight: 300, $size: $fontSizes-small);
+  color: $colors-smokeGray;
+}
+
+.feedback__date {
+  &::before {
+    content: " • ";
+  }
+}
+
+.feedback__text-wrap {
+  padding: 0 15px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.feedback__text {
+  padding-bottom: 5px;
+  @include font($weight: 300, $size: $fontSizes-small);
+  color: $colors-gray;
+}
+// --- Feedback card end ---
+
+// === Range start ===
+.feedback__scroll {
+  margin: 0 auto;
+  width: 600px;
+  height: 8px;
+
+  @include border-bg(
+    $border: $borders-s,
+    $radius: $radii-m,
+    $image: $colors-bgPink,
+    $bg-color: $colors-lightGray
+  );
+  overflow: hidden;
+
+  @include media-desktop-small {
+    width: 390px;
+  }
+  @include media-tablet {
+    display: none;
+  }
+
+  & input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+  }
+
+  & input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12.5%;
+    height: 6px;
+    border-radius: $radii-s;
+    background: $colors-lightOrange;
+  }
+}
+
+// --- Range end ---

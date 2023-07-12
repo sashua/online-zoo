@@ -1,0 +1,58 @@
+.menu {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  padding: 10px 10px 35px;
+
+  @include font($weight: 400);
+  color: $colors-blueBlack;
+  background-color: $colors-white;
+
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform $animations-default, opacity $animations-default;
+
+  @include media-tablet {
+    display: block;
+
+    &.is-shown {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.menu__logo {
+  margin-bottom: 25px;
+  color: $colors-lightOrange;
+}
+
+.menu__nav {
+  & .nav__list {
+    display: block;
+  }
+
+  & .nav__item {
+    margin-bottom: 5px;
+  }
+
+  & .nav__link {
+    padding: 5px 0;
+  }
+}
+
+.menu__link {
+  display: block;
+  padding: 5px 0;
+}
+
+.menu__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

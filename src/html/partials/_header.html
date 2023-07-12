@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="container header__container">
+    <h1 class="visually-hidden">PetStory Online</h1>
+    <include src="html/partials/_logo.html">
+      { "class": "logo--small header__logo" }
+    </include>
+    <nav class="nav header__nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link link {{aboutClass}}" href="index.html">About</a>
+        </li>
+        <li class="nav__item"><a class="nav__link link" href="#!">Map</a></li>
+        <li class="nav__item"><a class="nav__link link" href="#!">Zoos</a></li>
+        <li class="nav__item">
+          <a class="nav__link link {{donateClass}}" href="donate.html"
+            >Donate</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#!">Contact us</a>
+        </li>
+      </ul>
+    </nav>
+    <a
+      class="link header__link"
+      href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+      target="_blank"
+      rel="noreferrer noopener"
+      >Designed by &copy;</a
+    >
+    <button class="menu-button header__menu-open js-open-menu" type="button">
+      <svg class="menu-button__svg" width="22" height="22">
+        <use href="../img/sprite.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </div>
+
+  <include src="html/partials/_menu.html">
+    { "aboutClass": "{{aboutClass}}", "donateClass": "{{donateClass}}" }
+  </include>
+</header>

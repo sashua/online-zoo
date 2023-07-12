@@ -1,0 +1,32 @@
+<div class="menu js-menu">
+  <include src="html/partials/_logo.html">
+    { "class": "logo--menu menu__logo" }
+  </include>
+  <nav class="nav menu__nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link link {{aboutClass}}" href="index.html">About</a>
+      </li>
+      <li class="nav__item"><a class="nav__link link" href="#!">Map</a></li>
+      <li class="nav__item"><a class="nav__link link" href="#!">Zoos</a></li>
+      <li class="nav__item">
+        <a class="nav__link link {{donateClass}}" href="donate.html">Donate</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link link" href="#!">Contact us</a>
+      </li>
+    </ul>
+  </nav>
+  <a
+    class="menu__link link"
+    href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+    target="_blank"
+    rel="noreferrer noopener"
+    >Designed by &copy;</a
+  >
+  <button class="menu-button menu__close js-close-menu" type="button">
+    <svg class="menu-button__svg" width="22" height="22">
+      <use href="../img/sprite.svg#icon-close"></use>
+    </svg>
+  </button>
+</div>

@@ -1,0 +1,33 @@
+.link {
+  transition: color $animations-default;
+
+  &:hover,
+  &:focus {
+    color: $colors-green;
+  }
+  &:active {
+    color: $colors-orange;
+  }
+
+  &--active {
+    color: $colors-orange;
+
+    background-image: $colors-bgOrange;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--underlined {
+    text-decoration: underline transparent;
+    text-underline-offset: 6px;
+
+    transition: color $animations-default,
+      text-decoration-color $animations-default;
+
+    &:hover,
+    &:focus {
+      color: $colors-green;
+      text-decoration-color: currentColor;
+    }
+  }
+}

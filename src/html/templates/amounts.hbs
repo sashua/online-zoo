@@ -1,0 +1,14 @@
+{{#each amounts}}
+  <li class="form-select">
+    <label class="form-select__label">
+      <input
+        class="form-select__input"
+        type="radio"
+        name="amount"
+        value="{{this}}"
+      />
+      <span class="form-select__custom"></span>
+      <span class="form-select__text">${{this}}</span>
+    </label>
+  </li>
+{{/each}}

@@ -1,0 +1,58 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+
+  @include font($weight: 500, $height: 1.4);
+  color: $colors-white;
+
+  background-color: $colors-black;
+
+  @include media-tablet {
+    position: fixed;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 34px;
+}
+
+.header__nav {
+  margin-right: auto;
+  @include font($weight: 500);
+
+  @include media-desktop-small {
+    padding-left: 5px;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+
+  & .nav__link {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+}
+
+.header__link {
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.header__menu-open {
+  display: none;
+  margin-left: auto;
+
+  @include media-tablet {
+    display: flex;
+  }
+}

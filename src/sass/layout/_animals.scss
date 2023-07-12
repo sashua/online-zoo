@@ -1,0 +1,275 @@
+.animals {
+  padding-top: 95px;
+  padding-bottom: 100px;
+
+  background: url("../img/animals-bg-left.png") bottom left no-repeat,
+    url("../img/animals-bg-right.png") bottom right no-repeat;
+
+  @include media-desktop-small {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+    background: url("../img/animals-bg-left-small.png") bottom left no-repeat,
+      url("../img/animals-bg-right.png") bottom right / 250px no-repeat;
+  }
+  @include media-tablet {
+    padding-top: 0;
+    padding-bottom: 100px;
+
+    background: url("../img/animals-bg-left.png") bottom -20px left 0px / 140px no-repeat,
+      url("../img/animals-bg-right.png") bottom -10px right -5px / 190px
+        no-repeat;
+  }
+  @include media-mobile {
+    padding-bottom: 60px;
+
+    background: url("../img/animals-bg-left-small.png") bottom left -10px / 70px
+        no-repeat,
+      url("../img/animals-bg-right.png") bottom right -20px / 90px no-repeat;
+  }
+}
+
+.animals__container {
+  text-align: center;
+}
+
+.animals__button {
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+// === Slider start ===
+.slider {
+  position: relative;
+  margin-bottom: 75px;
+
+  @include media-desktop-small {
+    margin-bottom: 80px;
+  }
+  @include media-tablet {
+    margin-bottom: 60px;
+  }
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.slider__wrap {
+  overflow: hidden;
+}
+
+.slider__content {
+  position: relative;
+  display: flex;
+  gap: 30px;
+
+  &.move-left {
+    transform: translateX(calc(-100% - 30px));
+  }
+
+  &.animate {
+    transition: transform $animations-slide;
+  }
+}
+
+.slider__list {
+  flex-shrink: 0;
+
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 20px 30px;
+
+  width: 100%;
+
+  @include media-desktop-small {
+    gap: 92px 30px;
+  }
+  @include media-tablet {
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  }
+  @include media-mobile {
+    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+    gap: 20px;
+    padding: 0 7px;
+  }
+}
+
+.button.slider__button {
+  position: absolute;
+  top: 50%;
+
+  &--left {
+    left: -20px;
+    transform: translate(-100%, -50%);
+  }
+  &--right {
+    right: -20px;
+    transform: translate(100%, -50%);
+  }
+
+  @include media-desktop-small {
+    &--left {
+      left: calc((100% - 2 * 30px) / 3);
+      transform: translate(30px, -50%);
+    }
+    &--right {
+      right: calc((100% - 2 * 30px) / 3);
+
+      transform: translate(-30px, -50%);
+    }
+  }
+  @include media-tablet {
+    &--left {
+      left: 50%;
+      transform: translate(calc(-100% - 15px), -50%);
+    }
+    &--right {
+      right: 50%;
+      transform: translate(calc(100% + 15px), -50%);
+    }
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+// --- Slider end ---
+
+// === Animal start ===
+.animal {
+  position: relative;
+  overflow: hidden;
+
+  @include border-bg(
+    $border: $borders-m,
+    $radius: $radii-m,
+    $image: $colors-bgOrange,
+    $bg-color: $colors-white
+  );
+
+  &:nth-child(n + 7) {
+    display: none;
+  }
+
+  @include media-tablet {
+    &:nth-child(n + 5) {
+      display: none;
+    }
+  }
+}
+
+.animal__image {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: $colors-fadeBlack;
+    opacity: 0;
+    transition: opacity $animations-default;
+
+    .animal:hover &,
+    .animal:focus & {
+      opacity: 1;
+    }
+  }
+}
+
+.animal__img {
+  transform: scale(1);
+  transition: transform $animations-default;
+
+  .animal:hover &,
+  .animal:focus & {
+    transform: scale(1.05);
+  }
+}
+
+.animal__text-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+
+  overflow: hidden;
+
+  transform: translateY(100%);
+  transition: transform $animations-default;
+
+  .animal:hover &,
+  .animal:focus & {
+    transform: translateY(0);
+  }
+
+  @include media-tablet {
+    padding: 25px 0;
+  }
+}
+
+.animal__text {
+  overflow-y: scroll;
+  height: 100%;
+  padding: 0 30px;
+
+  @include font($weight: 100, $size: $fontSizes-small, $height: 1.4);
+  text-align: left;
+  color: $colors-white;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.animal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px 15px;
+  width: 100%;
+
+  background-color: $colors-white;
+
+  @include media-tablet {
+    padding: 8px 10px;
+  }
+}
+
+.animal__info {
+  text-align: left;
+}
+
+.animal__name {
+  margin-bottom: -2px;
+
+  @include font($weight: 500, $height: 1.4);
+  text-transform: uppercase;
+
+  @include media-tablet {
+    @include font($size: 12px);
+  }
+}
+
+.animal__living {
+  @include font($weight: 300, $size: $fontSizes-small);
+
+  @include media-tablet {
+    @include font($size: 12px);
+  }
+}
+
+.animal__food {
+  width: 30px;
+  height: 30px;
+}
+// --- Animal end ---
